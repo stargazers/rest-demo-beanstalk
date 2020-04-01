@@ -2,6 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
+# This is for Elastic Beanstalk
+application = app
+
 @app.route('/')
 def index():
     return 'Hello, world'
