@@ -1,4 +1,6 @@
 from flask import Flask
+from flask import jsonify
+import requests
 
 app = Flask(__name__)
 
@@ -6,12 +8,13 @@ app = Flask(__name__)
 application = app
 
 @app.route('/')
-def index():
+def index():    
     return 'Hello, world'
 
 @app.route('/weather')
 def weather():
-    return 'Cold.'
+    response = requests.get('http://wttr.in/Vantaa?format=j1')
+    return response.json()
     
 @app.route('/health')
 def health():
