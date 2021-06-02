@@ -35,6 +35,6 @@ SecretStorage==2.3.1
 simplejson==3.13.2
 six==1.11.0
 ttystatus==0.38
-urllib3==1.25.8
+urllib3==1.26.5
 Werkzeug==1.0.1
 xmltodict==0.11.0
